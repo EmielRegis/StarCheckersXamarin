@@ -1,0 +1,3 @@
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\bin\Debug\StarCheckersAndroid.dll
+C:\Program Files (x86)\MonoGame\v3.0\Assemblies\Android\MonoGame.Framework.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\bin\Debug\Lidgren.Network.dll

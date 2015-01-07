@@ -1,0 +1,65 @@
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\obj\x86\Debug\StarCheckersWindows.csprojResolveAssemblyReference.cache
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\SplashScreen\star_background.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\ScreenManager\FadeImage.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\SplashScreen\Image.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\Gameplay\character.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\Fonts\Orbitron.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\obj\x86\Debug\StarCheckersWindows.exe
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\obj\x86\Debug\StarCheckersWindows.pdb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\StarCheckersWindows.exe
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\StarCheckersWindows.pdb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\IgnoreMe.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\MonoGame.Framework.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.MediaFoundation.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.XAudio2.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.Direct3D11.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.DXGI.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.Direct2D1.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Lidgren.Network.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.XInput.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.RawInput.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.Direct3D9.dll
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.MediaFoundation.xml
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.xml
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.XAudio2.xml
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.Direct3D11.xml
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.DXGI.xml
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.Direct2D1.xml
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.XInput.xml
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.RawInput.xml
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\SharpDX.Direct3D9.xml
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\Cursors\Cursor.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\Themes\MainThemeWhite\Chessboard\BlackFieldImage.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\Themes\MainThemeWhite\Chessboard\WhiteFieldImage.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\Themes\MainThemeWhite\Figures\KingImage.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\Themes\MainThemeWhite\Figures\ManImage.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\Themes\MainThemeBlack\Chessboard\BlackFieldImage.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\Themes\MainThemeBlack\Chessboard\WhiteFieldImage.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\Themes\MainThemeBlack\Figures\KingImage.xnb
+C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersWindows\Content\Themes\MainThemeBlack\Figures\ManImage.xnb
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\obj\x86\Debug\StarCheckersWindows.exe
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\obj\x86\Debug\StarCheckersWindows.pdb
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\obj\x86\Debug\StarCheckersWindows.csprojResolveAssemblyReference.cache
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\StarCheckersWindows.exe
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\StarCheckersWindows.pdb
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\MonoGame.Framework.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.MediaFoundation.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.XAudio2.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.Direct3D11.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.DXGI.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.Direct2D1.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\Lidgren.Network.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.XInput.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.RawInput.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.Direct3D9.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.MediaFoundation.xml
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.xml
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.XAudio2.xml
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.Direct3D11.xml
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.DXGI.xml
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.Direct2D1.xml
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.XInput.xml
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.RawInput.xml
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\SharpDX.Direct3D9.xml

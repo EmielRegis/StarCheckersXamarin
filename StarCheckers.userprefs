@@ -1,0 +1,12 @@
+﻿<Properties>
+  <DisabledProjects>
+    <String>StarCheckersContent\StarCheckersContentContent\StarCheckersContentContent.contentproj</String>
+    <String>StarCheckersContent\StarCheckersContent\StarCheckersContent.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

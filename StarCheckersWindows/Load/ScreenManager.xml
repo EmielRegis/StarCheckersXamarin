@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScreenManager>
+  <Image>
+    <Path>ScreenManager/FadeImage</Path>
+    <Effects>FadeEffect</Effects>
+    <Scale>
+      <X>1280</X>
+      <Y>960</Y>
+    </Scale>
+  </Image>
+  <CursorImage>
+    <Path>Cursors/Cursor</Path>
+  </CursorImage>
+</ScreenManager>

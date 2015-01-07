@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>SplashScreen\star_background.jpg</Source>
+      <Name>SplashScreen\star_background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\SplashScreen\star_background.xnb</Output>
+      <Time>2013-06-09T10:20:50+02:00</Time>
+    </Item>
+    <Item>
+      <Source>ScreenManager\FadeImage.png</Source>
+      <Name>ScreenManager\FadeImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\ScreenManager\FadeImage.xnb</Output>
+      <Time>2014-12-22T17:19:08.012158+01:00</Time>
+    </Item>
+    <Item>
+      <Source>SplashScreen\Image.jpg</Source>
+      <Name>SplashScreen\Image</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\SplashScreen\Image.xnb</Output>
+      <Time>2014-12-20T13:44:51.6272426+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Gameplay\character.png</Source>
+      <Name>Gameplay\character</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\Gameplay\character.xnb</Output>
+      <Time>2014-12-28T21:16:14.7338302+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\Orbitron.spritefont</Source>
+      <Name>Fonts\Orbitron</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\Fonts\Orbitron.xnb</Output>
+      <Time>2014-12-22T14:15:16.9890162+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Cursors\Cursor.png</Source>
+      <Name>Cursors\Cursor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\Cursors\Cursor.xnb</Output>
+      <Time>2013-06-09T14:41:04+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Themes\MainThemeWhite\Chessboard\BlackFieldImage.jpg</Source>
+      <Name>Themes\MainThemeWhite\Chessboard\BlackFieldImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\Themes\MainThemeWhite\Chessboard\BlackFieldImage.xnb</Output>
+      <Time>2015-01-04T00:23:43.1836798+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Themes\MainThemeWhite\Chessboard\WhiteFieldImage.jpg</Source>
+      <Name>Themes\MainThemeWhite\Chessboard\WhiteFieldImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\Themes\MainThemeWhite\Chessboard\WhiteFieldImage.xnb</Output>
+      <Time>2015-01-04T00:23:43.1936798+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Themes\MainThemeWhite\Figures\KingImage.png</Source>
+      <Name>Themes\MainThemeWhite\Figures\KingImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\Themes\MainThemeWhite\Figures\KingImage.xnb</Output>
+      <Time>2015-01-04T00:23:43.2136799+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Themes\MainThemeWhite\Figures\ManImage.png</Source>
+      <Name>Themes\MainThemeWhite\Figures\ManImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\Themes\MainThemeWhite\Figures\ManImage.xnb</Output>
+      <Time>2015-01-04T00:23:43.2136799+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Themes\MainThemeBlack\Chessboard\BlackFieldImage.jpg</Source>
+      <Name>Themes\MainThemeBlack\Chessboard\BlackFieldImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\Themes\MainThemeBlack\Chessboard\BlackFieldImage.xnb</Output>
+      <Time>2015-01-04T00:27:41.5064868+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Themes\MainThemeBlack\Chessboard\WhiteFieldImage.jpg</Source>
+      <Name>Themes\MainThemeBlack\Chessboard\WhiteFieldImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\Themes\MainThemeBlack\Chessboard\WhiteFieldImage.xnb</Output>
+      <Time>2015-01-04T00:27:41.5064868+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Themes\MainThemeBlack\Figures\KingImage.png</Source>
+      <Name>Themes\MainThemeBlack\Figures\KingImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\Themes\MainThemeBlack\Figures\KingImage.xnb</Output>
+      <Time>2015-01-04T00:27:41.5064868+01:00</Time>
+    </Item>
+    <Item>
+      <Source>Themes\MainThemeBlack\Figures\ManImage.png</Source>
+      <Name>Themes\MainThemeBlack\Figures\ManImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\Themes\MainThemeBlack\Figures\ManImage.xnb</Output>
+      <Time>2015-01-04T00:27:41.5164868+01:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{FBD4A762-C640-4EC8-800D-994B71B7650A}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>PSM</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContentContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\obj\PSM\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Karol\Documents\Visual Studio 2013\Projects\StarCheckers\StarCheckersContent\StarCheckersContent\bin\PSM\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\MSBuild\MonoGame\v3.0\MonoGameContentProcessors.dll</Key>
+        <Value>2014-04-05T23:56:18+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T17:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T17:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T17:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T17:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T17:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T17:22:30+02:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-12-13T01:25:14.9890539+01:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

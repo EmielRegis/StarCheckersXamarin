@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{702000AB-1F76-456F-AA73-E6FA226B435D}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StarCheckersAndroid</RootNamespace>
+    <AssemblyName>StarCheckersAndroid</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidSupportedAbis>armeabi-v7a%3bx86</AndroidSupportedAbis>
+    <MandroidI18n />
+    <TargetFrameworkVersion>v2.3</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;ANDROID</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidStoreUncompressedFileExtensions>
+    </AndroidStoreUncompressedFileExtensions>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenTK" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Android\MonoGame.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity1.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\AI\BasicAI.cs" />
+    <Compile Include="Source\AI\IAlphaBetaMinMaxAlgorithm.cs" />
+    <Compile Include="Source\AI\IFigureEvaluator.cs" />
+    <Compile Include="Source\Chessboard\Chessboard.cs" />
+    <Compile Include="Source\Figures\Figure.cs" />
+    <Compile Include="Source\Figures\FigureColor.cs" />
+    <Compile Include="Source\Figures\King.cs" />
+    <Compile Include="Source\Figures\Man.cs" />
+    <Compile Include="Source\Image\FadeEffect.cs" />
+    <Compile Include="Source\Image\Image.cs" />
+    <Compile Include="Source\Image\ImageEffect.cs" />
+    <Compile Include="Source\Image\PrimitiveSpritePainter.cs" />
+    <Compile Include="Source\Image\SpriteSheetEffect.cs" />
+    <Compile Include="Source\Input\InputManager.cs" />
+    <Compile Include="Source\Menu\Menu.cs" />
+    <Compile Include="Source\Menu\MenuItem.cs" />
+    <Compile Include="Source\Menu\MenuManager.cs" />
+    <Compile Include="Source\Player\Character.cs" />
+    <Compile Include="Source\Screens\GameplayScreen.cs" />
+    <Compile Include="Source\Screens\GameScreen.cs" />
+    <Compile Include="Source\Screens\OnePlayerGameplayScreen.cs" />
+    <Compile Include="Source\Screens\ScreenManager.cs" />
+    <Compile Include="Source\Screens\SplashScreen.cs" />
+    <Compile Include="Source\Screens\StarNetGameplayScreen.cs" />
+    <Compile Include="Source\Screens\TitleScreen.cs" />
+    <Compile Include="Source\Screens\TwoPlayersGameplayScreen.cs" />
+    <Compile Include="Source\Utilities\XmlManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\spriteFont1.xnb" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidAsset Include="..\StarCheckersWindows\Content\Fonts\Orbitron.xnb">
+      <Link>Assets\Content\Fonts\Orbitron.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\Cursors\Cursor.xnb">
+      <Link>Assets\Content\Cursors\Cursor.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\Gameplay\character.xnb">
+      <Link>Assets\Content\Gameplay\character.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\ScreenManager\FadeImage.xnb">
+      <Link>Assets\Content\ScreenManager\FadeImage.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\SplashScreen\Image.xnb">
+      <Link>Assets\Content\SplashScreen\Image.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\SplashScreen\star_background.xnb">
+      <Link>Assets\Content\SplashScreen\star_background.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\Themes\MainThemeBlack\Chessboard\BlackFieldImage.xnb">
+      <Link>Assets\Content\Themes\MainThemeBlack\Chessboard\BlackFieldImage.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\Themes\MainThemeBlack\Chessboard\WhiteFieldImage.xnb">
+      <Link>Assets\Content\Themes\MainThemeBlack\Chessboard\WhiteFieldImage.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\Themes\MainThemeBlack\Figures\KingImage.xnb">
+      <Link>Assets\Content\Themes\MainThemeBlack\Figures\KingImage.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\Themes\MainThemeBlack\Figures\ManImage.xnb">
+      <Link>Assets\Content\Themes\MainThemeBlack\Figures\ManImage.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\Themes\MainThemeWhite\Chessboard\BlackFieldImage.xnb">
+      <Link>Assets\Content\Themes\MainThemeWhite\Chessboard\BlackFieldImage.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\Themes\MainThemeWhite\Chessboard\WhiteFieldImage.xnb">
+      <Link>Assets\Content\Themes\MainThemeWhite\Chessboard\WhiteFieldImage.xnb</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\Themes\MainThemeWhite\Figures\KingImage.xnb">
+      <Link>Assets\Content\Themes\MainThemeWhite\Figures\KingImage.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\StarCheckersWindows\Content\Themes\MainThemeWhite\Figures\ManImage.xnb">
+      <Link>Assets\Content\Themes\MainThemeWhite\Figures\ManImage.xnb</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Load\Gameplay\Character.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Load\Gameplay\Chessboard.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Load\Menus\TestMenu.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Load\Menus\TitleMenu.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Load\ScreenManager.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Load\SplashScreen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Load\TitleScreen.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Layout\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Drawable\Splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

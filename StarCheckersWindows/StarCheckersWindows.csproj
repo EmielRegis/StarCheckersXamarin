@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{13788682-6C55-4845-805D-46AA95D4523E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StarCheckersWindows</RootNamespace>
+    <AssemblyName>StarCheckersWindows</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Windows\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Source\AI\IAlphaBetaMinMaxAlgorithm.cs" />
+    <Compile Include="Source\AI\BasicAI.cs" />
+    <Compile Include="Source\Chessboard\Chessboard.cs" />
+    <Compile Include="Source\AI\IFigureEvaluator.cs" />
+    <Compile Include="Source\Figures\FigureColor.cs" />
+    <Compile Include="Source\Figures\King.cs" />
+    <Compile Include="Source\Figures\Man.cs" />
+    <Compile Include="Source\Figures\Figure.cs" />
+    <Compile Include="Source\Image\FadeEffect.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Source\Image\PrimitiveSpritePainter.cs" />
+    <Compile Include="Source\Screens\OnePlayerGameplayScreen.cs" />
+    <Compile Include="Source\Screens\GameplayScreen.cs" />
+    <Compile Include="Source\Screens\GameScreen.cs" />
+    <Compile Include="Source\Image\Image.cs" />
+    <Compile Include="Source\Image\ImageEffect.cs" />
+    <Compile Include="Source\Input\InputManager.cs" />
+    <Compile Include="Source\Menu\Menu.cs" />
+    <Compile Include="Source\Menu\MenuItem.cs" />
+    <Compile Include="Source\Menu\MenuManager.cs" />
+    <Compile Include="Source\Player\Character.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Screens\ScreenManager.cs" />
+    <Compile Include="Source\Screens\SplashScreen.cs" />
+    <Compile Include="Source\Image\SpriteSheetEffect.cs" />
+    <Compile Include="Source\Screens\StarNetGameplayScreen.cs" />
+    <Compile Include="Source\Screens\TitleScreen.cs" />
+    <Compile Include="Source\Screens\TwoPlayersGameplayScreen.cs" />
+    <Compile Include="Source\Utilities\XmlManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Load\Gameplay\Chessboard.xml" />
+    <Content Include="Load\Gameplay\Character.xml" />
+    <Content Include="Load\Menus\TestMenu.xml" />
+    <Content Include="Load\Menus\TitleMenu.xml" />
+    <Content Include="Load\TitleScreen.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Load\SplashScreen.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Load\ScreenManager.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Content\Cursors\Cursor.xnb" />
+    <None Include="Content\Fonts\Orbitron.xnb" />
+    <None Include="Content\Gameplay\character.xnb" />
+    <None Include="Content\ScreenManager\FadeImage.xnb" />
+    <None Include="Content\SplashScreen\Image.xnb" />
+    <None Include="Content\SplashScreen\star_background.xnb" />
+    <None Include="Content\Themes\MainThemeBlack\Chessboard\BlackFieldImage.xnb" />
+    <None Include="Content\Themes\MainThemeBlack\Chessboard\WhiteFieldImage.xnb" />
+    <None Include="Content\Themes\MainThemeBlack\Figures\KingImage.xnb" />
+    <None Include="Content\Themes\MainThemeBlack\Figures\ManImage.xnb" />
+    <None Include="Content\Themes\MainThemeWhite\Chessboard\BlackFieldImage.xnb" />
+    <None Include="Content\Themes\MainThemeWhite\Chessboard\WhiteFieldImage.xnb" />
+    <None Include="Content\Themes\MainThemeWhite\Figures\KingImage.xnb" />
+    <None Include="Content\Themes\MainThemeWhite\Figures\ManImage.xnb" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
