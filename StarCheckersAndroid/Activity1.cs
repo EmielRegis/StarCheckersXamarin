@@ -17,6 +17,7 @@ namespace StarCheckersAndroid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+
             StarCheckersWindows.Game1.Activity = this;
             var g = new StarCheckersWindows.Game1();
             SetContentView(g.Window);

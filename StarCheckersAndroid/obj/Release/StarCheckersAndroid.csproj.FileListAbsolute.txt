@@ -1,0 +1,15 @@
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\bin\Release\StarCheckersAndroid.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\bin\Release\StarCheckersAndroid.pdb
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\bin\Release\StarCheckersAndroid.StarCheckersAndroid.apk
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\bin\Release\StarCheckersAndroid.StarCheckersAndroid-Signed.apk
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\bin\Release\MonoGame.Framework.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\bin\Release\Lidgren.Network.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\obj\Release\StarCheckersAndroid.dll
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\obj\Release\StarCheckersAndroid.pdb
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\obj\Release\android\bin\StarCheckersAndroid.StarCheckersAndroid.apk
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\obj\Release\res\values\strings.xml
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\obj\Release\res\drawable\icon.png
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\obj\Release\res\drawable\splash.png
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\obj\Release\res\values\styles.xml
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\obj\Release\R.cs.flag
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersAndroid\obj\Release\uploadflags.txt

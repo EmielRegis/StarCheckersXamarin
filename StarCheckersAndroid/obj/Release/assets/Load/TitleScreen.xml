@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TitleScreen>
+  <Image>
+    <Effects>FadeEffect</Effects>
+    <Path>SplashScreen/star_background</Path>
+    <IsActive>false</IsActive>
+    <Alpha>0.5</Alpha>
+  </Image>
+  
+</TitleScreen>

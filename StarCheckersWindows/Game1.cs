@@ -31,14 +31,16 @@ namespace StarCheckersWindows
 		/// </summary>
 		protected override void Initialize()
 		{
-			graphics.IsFullScreen = true;
+			
 
 			#if ANDROID
 			graphics.SupportedOrientations = DisplayOrientation.Portrait;
+            graphics.IsFullScreen = true;
 			#else
 			graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
 			graphics.PreferredBackBufferWidth = 960;
 			graphics.PreferredBackBufferHeight = 640;
+            graphics.IsFullScreen = false;
 			#endif
 
 			graphics.ApplyChanges();
