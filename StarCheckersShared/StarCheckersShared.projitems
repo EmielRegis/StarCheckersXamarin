@@ -9,6 +9,36 @@
     <Import_RootNamespace>StarCheckersShared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)MyClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AI\BasicAI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AI\IAlphaBetaMinMaxAlgorithm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AI\IFigureEvaluator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Chessboard\Chessboard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Figures\Figure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Figures\FigureColor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Figures\King.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Figures\Man.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Image\FadeEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Image\Image.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Image\ImageEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Image\PrimitiveSpritePainter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Image\SpriteSheetEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Input\InputManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Menu\Menu.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Menu\MenuItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Menu\MenuManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\Cilent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Player\Character.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\GameplayScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\GameScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\OnePlayerGameplayScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\ScreenManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\SplashScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\StarNetGameplayScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\TitleScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Screens\TwoPlayersGameplayScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\XmlManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Source\" />
   </ItemGroup>
 </Project>
