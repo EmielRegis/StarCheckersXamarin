@@ -4,10 +4,9 @@
     <String>StarCheckersContent\StarCheckersContent\StarCheckersContent.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StarCheckersWindows\Game1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StarCheckersWindows\Source\Net\Cilent.cs">
     <Files>
-      <File FileName="StarCheckersWindows\Source\Image\Image.cs" Line="10" Column="10" />
-      <File FileName="StarCheckersWindows\Game1.cs" Line="1" Column="1" />
+      <File FileName="StarCheckersWindows\Source\Net\Cilent.cs" Line="49" Column="49" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
