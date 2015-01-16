@@ -70,37 +70,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Load\Gameplay\Chessboard.xml" />
-    <Content Include="Load\Gameplay\Character.xml" />
-    <Content Include="Load\Menus\TestMenu.xml" />
-    <Content Include="Load\Menus\TitleMenu.xml" />
+    <Content Include="Load\Gameplay\Chessboard.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Load\Gameplay\Character.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Load\Menus\TestMenu.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Load\Menus\TitleMenu.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Load\TitleScreen.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Load\SplashScreen.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Load\ScreenManager.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Cursors\Cursor.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Fonts\Orbitron.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Gameplay\character.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\ScreenManager\FadeImage.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\SplashScreen\Image.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\SplashScreen\star_background.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Themes\MainThemeBlack\Chessboard\BlackFieldImage.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Themes\MainThemeBlack\Chessboard\WhiteFieldImage.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Themes\MainThemeBlack\Figures\KingImage.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Themes\MainThemeBlack\Figures\ManImage.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Themes\MainThemeWhite\Chessboard\BlackFieldImage.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Themes\MainThemeWhite\Chessboard\WhiteFieldImage.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Themes\MainThemeWhite\Figures\KingImage.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Themes\MainThemeWhite\Figures\ManImage.xnb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <None Include="Content\Cursors\Cursor.xnb" />
-    <None Include="Content\Fonts\Orbitron.xnb" />
-    <None Include="Content\Gameplay\character.xnb" />
-    <None Include="Content\ScreenManager\FadeImage.xnb" />
-    <None Include="Content\SplashScreen\Image.xnb" />
-    <None Include="Content\SplashScreen\star_background.xnb" />
-    <None Include="Content\Themes\MainThemeBlack\Chessboard\BlackFieldImage.xnb" />
-    <None Include="Content\Themes\MainThemeBlack\Chessboard\WhiteFieldImage.xnb" />
-    <None Include="Content\Themes\MainThemeBlack\Figures\KingImage.xnb" />
-    <None Include="Content\Themes\MainThemeBlack\Figures\ManImage.xnb" />
-    <None Include="Content\Themes\MainThemeWhite\Chessboard\BlackFieldImage.xnb" />
-    <None Include="Content\Themes\MainThemeWhite\Chessboard\WhiteFieldImage.xnb" />
-    <None Include="Content\Themes\MainThemeWhite\Figures\KingImage.xnb" />
-    <None Include="Content\Themes\MainThemeWhite\Figures\ManImage.xnb" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
