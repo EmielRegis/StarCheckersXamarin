@@ -1,13 +1,13 @@
-﻿<Properties>
+﻿<Properties StartupItem="StarCheckersWindows\StarCheckersWindows.csproj">
   <DisabledProjects>
     <String>StarCheckersContent\StarCheckersContentContent\StarCheckersContentContent.contentproj</String>
     <String>StarCheckersContent\StarCheckersContent\StarCheckersContent.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StarCheckersLinux\Game1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StarCheckersWindows\Game1.cs">
     <Files>
-      <File FileName="c:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersWindows\Source\Utilities\XmlManager.cs" Line="1" Column="1" />
-      <File FileName="StarCheckersLinux\Game1.cs" Line="1" Column="1" />
+      <File FileName="StarCheckersWindows\Source\Image\Image.cs" Line="10" Column="10" />
+      <File FileName="StarCheckersWindows\Game1.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
+using System.Runtime.Remoting.Lifetime;
 
 #endregion
 
@@ -44,6 +45,7 @@ namespace StarCheckersWindows
 			#endif
 
 			graphics.ApplyChanges();
+
 
 			base.Initialize();
 		}

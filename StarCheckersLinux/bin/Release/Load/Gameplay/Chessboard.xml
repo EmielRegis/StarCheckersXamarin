@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Chessboard>
-  <BlackFieldImage>
-    <Path>Themes/MainThemeWhite/Chessboard/BlackFieldImage</Path>
-  </BlackFieldImage>
-  <WhiteFieldImage>
-    <Path>Themes/MainThemeWhite/Chessboard/WhiteFieldImage</Path>
-  </WhiteFieldImage>
-</Chessboard>

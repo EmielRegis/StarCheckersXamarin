@@ -84,6 +84,7 @@
     <Compile Include="Source\Screens\TitleScreen.cs" />
     <Compile Include="Source\Screens\TwoPlayersGameplayScreen.cs" />
     <Compile Include="Source\Utilities\XmlManager.cs" />
+    <Compile Include="Source\Net\Cilent.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Content\spriteFont1.xnb" />
