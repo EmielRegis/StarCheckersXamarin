@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
+using System.Net;
 
 #endregion
 
@@ -31,7 +32,10 @@ namespace StarCheckersWindows
         /// </summary>
         protected override void Initialize()
         {
+            new AsyncClient(IPAddress.Parse("25.122.152.24"), 8888).StartClient();
 
+            string message;
+//            new Client(IPAddress.Parse("25.122.152.24"), 8888).StartClient(out message);
 
             #if ANDROID
             graphics.SupportedOrientations = DisplayOrientation.Portrait;

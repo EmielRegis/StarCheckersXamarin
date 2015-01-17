@@ -26,7 +26,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Menu\Menu.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Menu\MenuItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Menu\MenuManager.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Net\Cilent.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Player\Character.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\GameplayScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\GameScreen.cs" />
@@ -37,6 +36,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Screens\TitleScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Screens\TwoPlayersGameplayScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\XmlManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\AsyncClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\Client.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\NetworkMessageType.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Source\" />
