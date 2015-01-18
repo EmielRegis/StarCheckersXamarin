@@ -5,6 +5,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
 using System.Net;
+using System.Threading;
+using System;
+using System.Diagnostics;
 
 #endregion
 
@@ -32,10 +35,30 @@ namespace StarCheckersWindows
         /// </summary>
         protected override void Initialize()
         {
-            new AsyncClient(IPAddress.Parse("25.122.152.24"), 8888).StartClient();
+            Thread.Sleep(2000);
+            SyncClient client = new SyncClient(IPAddress.Parse("192.168.0.11"), 8888);
+//            SyncClient client = new SyncClient(IPAddress.Parse("25.122.152.24"), 8888);
+            client.StartClient();
+            Console.WriteLine(Process.GetCurrentProcess().Id);
 
-            string message;
-//            new Client(IPAddress.Parse("25.122.152.24"), 8888).StartClient(out message);
+//            client.SendAndReceiveMessage("start");
+            client.ReceiveMessage();
+
+            client.SendAndReceiveMessage(Process.GetCurrentProcess().Id +"initial message");
+            client.SendAndReceiveMessage("other message");
+            string ans = client.SendAndReceiveMessage("another message");
+            if (ans != "yet antoher message")
+                client.SendAndReceiveMessage("yet antoher message");
+            else 
+                client.SendMessage("yet antoher message");
+            client.SendMessage("end");
+            client.StopClient();
+
+//            using  (var netManager = new NetworkManager(IPAddress.Parse("25.122.152.24"), 8888))
+//            {
+//                netManager.SendReceiveMessage(NetworkMessageType.OK, true);
+//            }
+
 
             #if ANDROID
             graphics.SupportedOrientations = DisplayOrientation.Portrait;

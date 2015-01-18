@@ -119,10 +119,13 @@ namespace StarCheckersWindows
                 while (XPosition - x >= 0 && YPosition - y >= 0)
                 {
                     if (playerFigures.All(f => (f.XPosition != XPosition - x) || (f.YPosition != YPosition - y)) &&
-                                enemyFigures.All(f => (f.XPosition != XPosition - x) || (f.YPosition != YPosition - y)) &&
-                                enemyFigures.Any(f => (f.XPosition == XPosition - x + 1) && (f.YPosition == YPosition - y + 1)))
+                        enemyFigures.All(f => (f.XPosition != XPosition - x) || (f.YPosition != YPosition - y)) &&
+                        enemyFigures.Any(f => (f.XPosition == XPosition - x + 1) && (f.YPosition == YPosition - y + 1)))
+                    {
                         moves.Add(new Tuple<Point, Figure>(new Point(XPosition - x, YPosition - y),
-                        enemyFigures.First(f => (f.XPosition == XPosition - x + 1) && (f.YPosition == YPosition - y + 1))));
+                                enemyFigures.First(f => (f.XPosition == XPosition - x + 1) && (f.YPosition == YPosition - y + 1))));
+                        break;
+                    }
 
                     if ((enemyFigures.Any(f => f.XPosition == XPosition - x + 1 && f.YPosition == YPosition - y + 1) &&
                         enemyFigures.Any(f => f.XPosition == XPosition - x && f.YPosition == YPosition - y)) ||
@@ -138,10 +141,13 @@ namespace StarCheckersWindows
                 while (XPosition - x >= 0 && YPosition + y <= 7)
                 {
                     if (playerFigures.All(f => (f.XPosition != XPosition - x) || (f.YPosition != YPosition + y)) &&
-                    enemyFigures.All(f => (f.XPosition != XPosition - x) || (f.YPosition != YPosition + y)) &&
-                    enemyFigures.Any(f => (f.XPosition == XPosition - x + 1) && (f.YPosition == YPosition + y - 1)))
+                        enemyFigures.All(f => (f.XPosition != XPosition - x) || (f.YPosition != YPosition + y)) &&
+                        enemyFigures.Any(f => (f.XPosition == XPosition - x + 1) && (f.YPosition == YPosition + y - 1)))
+                    {
                         moves.Add(new Tuple<Point, Figure>(new Point(XPosition - x, YPosition + y),
-                        enemyFigures.First(f => (f.XPosition == XPosition - x + 1) && (f.YPosition == YPosition + y - 1))));
+                                enemyFigures.First(f => (f.XPosition == XPosition - x + 1) && (f.YPosition == YPosition + y - 1))));
+                        break;
+                    }
 
                     if ((enemyFigures.Any(f => f.XPosition == XPosition - x + 1 && f.YPosition == YPosition + y - 1) &&
                         enemyFigures.Any(f => f.XPosition == XPosition - x && f.YPosition == YPosition + y)) ||
@@ -157,10 +163,13 @@ namespace StarCheckersWindows
                 while (XPosition + x <= 7 && YPosition - y >= 0)
                 {
                     if (playerFigures.All(f => (f.XPosition != XPosition + x) || (f.YPosition != YPosition - y)) &&
-                    enemyFigures.All(f => (f.XPosition != XPosition + x) || (f.YPosition != YPosition - y)) &&
-                    enemyFigures.Any(f => (f.XPosition == XPosition + x - 1) && (f.YPosition == YPosition - y + 1)))
+                        enemyFigures.All(f => (f.XPosition != XPosition + x) || (f.YPosition != YPosition - y)) &&
+                        enemyFigures.Any(f => (f.XPosition == XPosition + x - 1) && (f.YPosition == YPosition - y + 1)))
+                    {
                         moves.Add(new Tuple<Point, Figure>(new Point(XPosition + x, YPosition - y),
-                        enemyFigures.First(f => (f.XPosition == XPosition + x - 1) && (f.YPosition == YPosition - y + 1))));
+                                enemyFigures.First(f => (f.XPosition == XPosition + x - 1) && (f.YPosition == YPosition - y + 1))));
+                        break;
+                    }
 
                     if ((enemyFigures.Any(f => f.XPosition == XPosition + x - 1 && f.YPosition == YPosition - y + 1) &&
                         enemyFigures.Any(f => f.XPosition == XPosition + x && f.YPosition == YPosition - y)) ||
@@ -176,10 +185,13 @@ namespace StarCheckersWindows
                 while (XPosition + x <= 7 && YPosition + y <= 7)
                 {
                     if (playerFigures.All(f => (f.XPosition != XPosition + x) || (f.YPosition != YPosition + y)) &&
-                    enemyFigures.All(f => (f.XPosition != XPosition + x) || (f.YPosition != YPosition + y)) &&
-                    enemyFigures.Any(f => (f.XPosition == XPosition + x - 1) && (f.YPosition == YPosition + y - 1)))
+                        enemyFigures.All(f => (f.XPosition != XPosition + x) || (f.YPosition != YPosition + y)) &&
+                        enemyFigures.Any(f => (f.XPosition == XPosition + x - 1) && (f.YPosition == YPosition + y - 1)))
+                    {
                         moves.Add(new Tuple<Point, Figure>(new Point(XPosition + x, YPosition + y),
-                        enemyFigures.First(f => (f.XPosition == XPosition + x - 1) && (f.YPosition == YPosition + y - 1))));
+                                enemyFigures.First(f => (f.XPosition == XPosition + x - 1) && (f.YPosition == YPosition + y - 1))));
+                        break;
+                    }
 
                     if ((enemyFigures.Any(f => f.XPosition == XPosition + x - 1 && f.YPosition == YPosition + y - 1) &&
                         enemyFigures.Any(f => f.XPosition == XPosition + x && f.YPosition == YPosition + y)) ||

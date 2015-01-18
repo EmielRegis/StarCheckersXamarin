@@ -4,9 +4,14 @@
     <String>StarCheckersContent\StarCheckersContent\StarCheckersContent.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StarCheckersWindows\Source\Net\Cilent.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StarCheckersWindows\Game1.cs">
     <Files>
-      <File FileName="StarCheckersWindows\Source\Net\Cilent.cs" Line="49" Column="49" />
+      <File FileName="StarCheckersShared\Net\SyncClient.cs" Line="1" Column="1" />
+      <File FileName="StarCheckersWindows\Game1.cs" Line="13" Column="13" />
+      <File FileName="StarCheckersShared\Net\NetworkMessageType.cs" Line="31" Column="31" />
+      <File FileName="StarCheckersServer\Program.cs" Line="3" Column="3" />
+      <File FileName="c:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersShared\Net\NetworkManager.cs" Line="4" Column="4" />
+      <File FileName="c:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersLinux\Game1.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

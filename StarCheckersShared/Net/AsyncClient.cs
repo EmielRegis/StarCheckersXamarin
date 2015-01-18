@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading;
 using System.Net;
 
+
 namespace StarCheckersWindows
 {
     public class StateObject 
@@ -22,9 +23,8 @@ namespace StarCheckersWindows
     {
         private IPAddress serverIP;
         private int serverPort;
-
-        // The port number for the remote device.
-        private const int port = 11000;
+            
+        private Socket serverSocket;
 
         // ManualResetEvent instances signal completion.
         private  ManualResetEvent connectDone = new ManualResetEvent(false);
@@ -40,7 +40,7 @@ namespace StarCheckersWindows
             this.serverPort = serverPort;
         }
 
-        public void StartClient()
+        public string StartClient(string message)
         {
             // Connect to a remote device.
             try 
@@ -54,34 +54,41 @@ namespace StarCheckersWindows
                 IPEndPoint remoteEP = new IPEndPoint(serverIP, serverPort);
 
                 // Create a TCP/IP socket.
-                Socket client = new Socket(AddressFamily.InterNetwork,
+                serverSocket = new Socket(AddressFamily.InterNetwork,
                     SocketType.Stream, ProtocolType.Tcp);
 
                 // Connect to the remote endpoint.
-                client.BeginConnect( remoteEP, new AsyncCallback(ConnectCallback), client);
+                serverSocket.BeginConnect( remoteEP, new AsyncCallback(ConnectCallback), serverSocket);
                 connectDone.WaitOne();
 
                 // Send test data to the remote device.
-                Send(client,"This is a test<EOF>");
+                Send(serverSocket, message);
                 sendDone.WaitOne();
 
                 // Receive the response from the remote device.
-                Receive(client);
+                Receive(serverSocket);
                 receiveDone.WaitOne();
+
 
                 // Write the response to the console.
                 Console.WriteLine("Response received : {0}", response);
 
+//
                 // Release the socket.
-                client.Shutdown(SocketShutdown.Both);
-                client.Close();
+                serverSocket.Shutdown(SocketShutdown.Both);
+                serverSocket.Close();
+
+                return response;
 
             } 
             catch (Exception e) 
             {
                 Console.WriteLine(e.ToString());
+
+                return "-1";
             }
         }
+           
 
         private void ConnectCallback(IAsyncResult ar) 
         {

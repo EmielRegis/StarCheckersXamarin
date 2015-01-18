@@ -37,8 +37,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Screens\TwoPlayersGameplayScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\XmlManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Net\AsyncClient.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Net\Client.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Net\NetworkMessageType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\NetworkManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\SyncClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\NetworkMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Source\" />
