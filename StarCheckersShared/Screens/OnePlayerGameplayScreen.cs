@@ -13,7 +13,7 @@ namespace StarCheckersWindows
         private IList<Figure> remFigs = new List<Figure>();
         private IList<Point> destPts = new List<Point>();
  
-        public OnePlayerGameplayScreen()
+        public OnePlayerGameplayScreen() : base()
         {
 
         }
@@ -126,6 +126,8 @@ namespace StarCheckersWindows
         {
             if (isEnemyTurn)
             {
+
+
                 Figure f;
                 var ai = new BasicAI();
                 int result = ai.AlphaBetaMinMaxAlgorithm(0, 5, int.MinValue, int.MaxValue, true, enemyFigures, playerFigures, ai, out f,

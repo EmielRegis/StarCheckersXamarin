@@ -24,6 +24,8 @@ namespace StarCheckersWindows
         public SpriteBatch SpriteBatch { get; set; }
         public Image Image { get; set; }
 
+        private Action applicationExitAction;
+
         [XmlIgnore]
         public bool IsTransitioning { get; private set; }
 
@@ -143,6 +145,17 @@ namespace StarCheckersWindows
 
             if(CursorImage != null)
                 CursorImage.Draw(SpriteBatch);
+        }
+
+        public void OnApplicationExit()
+        {
+            if (applicationExitAction != null)
+                applicationExitAction();
+        }
+
+        public void AddOnExitApplicationAction(Action onExitAction)
+        {
+            this.applicationExitAction += onExitAction;
         }
     }
 }

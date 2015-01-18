@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using StarCheckersWindows.Source.Figures;
+using Microsoft.Xna.Framework.GamerServices;
 
 namespace StarCheckersWindows
 {
@@ -63,6 +64,23 @@ namespace StarCheckersWindows
             blackManImage = new Image { Path = "Themes/MainThemeBlack/Figures/ManImage" };
             whiteKingImage = new Image { Path = "Themes/MainThemeWhite/Figures/KingImage" };
             blackKingImage = new Image { Path = "Themes/MainThemeBlack/Figures/KingImage" };
+
+            enemyFigures = new List<Figure>
+                {
+                    new Man(1, 0), new Man(3, 0), new Man(5, 0), new Man(7, 0), 
+                    new Man(0, 1), new Man(2, 1), new Man(4, 1), new Man(6, 1),
+                    new Man(1, 2), new Man(3, 2), new Man(5, 2), new Man(7, 2)
+                };
+
+            playerFigures = new List<Figure>
+                {
+                    new Man(0, 5), new Man(2, 5), new Man(4, 5), new Man(6, 5), 
+                    new Man(1, 6), new Man(3, 6), new Man(5, 6), new Man(7, 6),
+                    new Man(0, 7), new Man(2, 7), new Man(4, 7), new Man(6, 7)
+                };
+
+            whiteFigures = playerFigures;
+            blackFigures = enemyFigures;
         }
 
         protected GameplayScreen(string whiteFiguresTemplate, string blackFiguresTemplate)
@@ -79,6 +97,23 @@ namespace StarCheckersWindows
             blackManImage = new Image { Path = "Themes/" + blackFiguresTemplate + "/Figures/ManImage" };
             whiteKingImage = new Image { Path = "Themes/" + whiteFiguresTemplate + "/Figures/KingImage" };
             blackKingImage = new Image { Path = "Themes/" + blackFiguresTemplate + "/Figures/KingImage" };
+
+            enemyFigures = new List<Figure>
+                {
+                    new Man(1, 0), new Man(3, 0), new Man(5, 0), new Man(7, 0), 
+                    new Man(0, 1), new Man(2, 1), new Man(4, 1), new Man(6, 1),
+                    new Man(1, 2), new Man(3, 2), new Man(5, 2), new Man(7, 2)
+                };
+
+            playerFigures = new List<Figure>
+                {
+                    new Man(0, 5), new Man(2, 5), new Man(4, 5), new Man(6, 5), 
+                    new Man(1, 6), new Man(3, 6), new Man(5, 6), new Man(7, 6),
+                    new Man(0, 7), new Man(2, 7), new Man(4, 7), new Man(6, 7)
+                };
+
+            whiteFigures = playerFigures;
+            blackFigures = enemyFigures;
         }
 
         public override void LoadContent()
@@ -94,22 +129,7 @@ namespace StarCheckersWindows
             whiteKingImage.LoadContent();
             blackKingImage.LoadContent();
 
-            enemyFigures = new List<Figure>
-            {
-                new Man(1, 0), new Man(3, 0), new Man(5, 0), new Man(7, 0), 
-                new Man(0, 1), new Man(2, 1), new Man(4, 1), new Man(6, 1),
-                new Man(1, 2), new Man(3, 2), new Man(5, 2), new Man(7, 2)
-            };
-
-            playerFigures = new List<Figure>
-            {
-                new Man(0, 5), new Man(2, 5), new Man(4, 5), new Man(6, 5), 
-                new Man(1, 6), new Man(3, 6), new Man(5, 6), new Man(7, 6),
-                new Man(0, 7), new Man(2, 7), new Man(4, 7), new Man(6, 7)
-            };
-
-            whiteFigures = playerFigures;
-            blackFigures = enemyFigures;
+           
 
             whiteFigures.ForEach(f =>
             {
@@ -157,6 +177,7 @@ namespace StarCheckersWindows
 
 			if (InputManager.Instance.MouseLeftButtonPressed() || InputManager.Instance.IsTouch)
             {
+
                 ChessboardClickAction();
                 if (OnChessboardClick != null) OnChessboardClick();
 				InputManager.Instance.HandleTouch ();
@@ -175,7 +196,7 @@ namespace StarCheckersWindows
                 }
                 else if (!enemyFigures.Any())
                 {
-                    
+
                 }
             }
         }

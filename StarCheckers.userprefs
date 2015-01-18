@@ -4,14 +4,13 @@
     <String>StarCheckersContent\StarCheckersContent\StarCheckersContent.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StarCheckersWindows\Game1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StarCheckersShared\Screens\StarNetGameplayScreen.cs">
     <Files>
-      <File FileName="StarCheckersShared\Net\SyncClient.cs" Line="1" Column="1" />
-      <File FileName="StarCheckersWindows\Game1.cs" Line="13" Column="13" />
-      <File FileName="StarCheckersShared\Net\NetworkMessageType.cs" Line="31" Column="31" />
-      <File FileName="StarCheckersServer\Program.cs" Line="3" Column="3" />
-      <File FileName="c:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersShared\Net\NetworkManager.cs" Line="4" Column="4" />
-      <File FileName="c:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersLinux\Game1.cs" Line="1" Column="1" />
+      <File FileName="StarCheckersShared\Screens\StarNetGameplayScreen.cs" Line="1" Column="1" />
+      <File FileName="StarCheckersShared\Screens\GameplayScreen.cs" Line="1" Column="1" />
+      <File FileName="StarCheckersShared\Net\SyncClient.cs" Line="31" Column="31" />
+      <File FileName="StarCheckersWindows\Game1.cs" Line="1" Column="1" />
+      <File FileName="StarCheckersShared\Net\Move.cs" Line="2" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -41,6 +41,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Net\NetworkManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Net\SyncClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Net\NetworkMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Net\Move.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Source\" />

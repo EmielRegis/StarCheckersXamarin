@@ -35,24 +35,7 @@ namespace StarCheckersWindows
         /// </summary>
         protected override void Initialize()
         {
-            Thread.Sleep(2000);
-            SyncClient client = new SyncClient(IPAddress.Parse("192.168.0.11"), 8888);
-//            SyncClient client = new SyncClient(IPAddress.Parse("25.122.152.24"), 8888);
-            client.StartClient();
-            Console.WriteLine(Process.GetCurrentProcess().Id);
 
-//            client.SendAndReceiveMessage("start");
-            client.ReceiveMessage();
-
-            client.SendAndReceiveMessage(Process.GetCurrentProcess().Id +"initial message");
-            client.SendAndReceiveMessage("other message");
-            string ans = client.SendAndReceiveMessage("another message");
-            if (ans != "yet antoher message")
-                client.SendAndReceiveMessage("yet antoher message");
-            else 
-                client.SendMessage("yet antoher message");
-            client.SendMessage("end");
-            client.StopClient();
 
 //            using  (var netManager = new NetworkManager(IPAddress.Parse("25.122.152.24"), 8888))
 //            {
@@ -120,7 +103,11 @@ namespace StarCheckersWindows
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
+                ScreenManager.Instance.OnApplicationExit();
                 Exit();
+            }
+                
 
             ScreenManager.Instance.Update(gameTime);
 

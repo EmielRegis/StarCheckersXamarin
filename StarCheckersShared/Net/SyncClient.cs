@@ -39,7 +39,7 @@ namespace StarCheckersWindows
             {
 
                 // Encode the data string into a byte array.
-                byte[] msg = Encoding.ASCII.GetBytes(message + "<EOF>");
+                byte[] msg = Encoding.ASCII.GetBytes(message);
 
                 // Send the data through the socket.
                 int bytesSent = serverSocket.Send(msg);
@@ -77,7 +77,7 @@ namespace StarCheckersWindows
         public void SendMessage(string message)
         {
             // Encode the data string into a byte array.
-            byte[] msg = Encoding.ASCII.GetBytes(message + "<EOF>");
+            byte[] msg = Encoding.ASCII.GetBytes(message);
 
             // Send the data through the socket.
             int bytesSent = serverSocket.Send(msg);

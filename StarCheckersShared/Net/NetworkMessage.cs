@@ -5,8 +5,8 @@ namespace StarCheckersWindows
 {
     public sealed class NetworkMessage
     {
-        public NetworkMessageType Type;
-        public object Object;
+        public NetworkMessageType Type { get; set;}
+        public object Obj { get; set;}
 
         public NetworkMessage()
         {
@@ -16,7 +16,7 @@ namespace StarCheckersWindows
         public NetworkMessage(NetworkMessageType type, object obj)
         {
             Type = type;
-            Object = obj;
+            this.Obj = obj;
         }
     }
 }
