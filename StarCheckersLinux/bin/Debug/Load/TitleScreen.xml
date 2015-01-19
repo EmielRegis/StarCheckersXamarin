@@ -4,7 +4,7 @@
     <Effects>FadeEffect</Effects>
     <Path>SplashScreen/star_background</Path>
     <IsActive>false</IsActive>
-    <Alpha>0.5</Alpha>
+    <Alpha>1.0</Alpha>
   </Image>
   
 </TitleScreen>

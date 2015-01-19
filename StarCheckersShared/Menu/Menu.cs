@@ -107,6 +107,8 @@ namespace StarCheckersWindows
                     i.Image.Update(gameTime);
                 });
             }
+
+
         }
 
         public void Draw(SpriteBatch spriteBatch)

@@ -16,6 +16,7 @@ namespace StarCheckersWindows
 
         public override void LoadContent()
         {
+            Image = Image?? new Image{Path =  "SplashScreen/star_background"};
             base.LoadContent();
             menuManager.LoadContent("Load/Menus/TitleMenu.xml");
             Image.LoadContent();

@@ -130,6 +130,10 @@
     <Content Include="Content\Themes\MainThemeWhite\Figures\KingImage.xnb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Load\Menus\ScreenManager.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="..\StarCheckersShared\StarCheckersShared.projitems" Label="Shared" Condition="Exists('..\StarCheckersShared\StarCheckersShared.projitems')" />

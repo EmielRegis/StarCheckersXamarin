@@ -12,6 +12,7 @@ namespace StarCheckersWindows
 {
     public abstract class GameplayScreen : GameScreen
     {
+        private bool initialized = false;
 //        GameplayManager
         public event Action<Figure> OnPreparePlayerFigure;
         public event Action<Figure> OnPrepareEnemyFigure;
@@ -20,6 +21,8 @@ namespace StarCheckersWindows
 
         public bool IsRecursiveCaptureAllowed = true;
         public bool IsCapturingNecessary = true;
+
+        protected Image backgroundImage;
 
         public Func<bool> EndgameCondition; 
 //        end of GameplayManager
@@ -42,6 +45,9 @@ namespace StarCheckersWindows
         protected bool isEnemyTurn = false;     
         protected bool isRecursiveCaptureInProgress = false;
 
+        protected Action PlayerWins;
+        protected Action EnemyWins;
+
         protected abstract void PreparePlayerFigure(Figure f);
 
         protected abstract void PrepareEnemyFigure(Figure f);
@@ -55,6 +61,7 @@ namespace StarCheckersWindows
 
         protected GameplayScreen()
         {
+            backgroundImage = new Image{ Path = "SplashScreen/star_background" };
             character = new XmlManager<Character>().Load("Load/Gameplay/Character.xml");
 
             XmlManager<Chessboard> xml = new XmlManager<Chessboard> { Type = typeof(Chessboard) };
@@ -85,6 +92,7 @@ namespace StarCheckersWindows
 
         protected GameplayScreen(string whiteFiguresTemplate, string blackFiguresTemplate)
         {
+            backgroundImage = new Image{ Path = "SplashScreen/star_background" };
             character = new XmlManager<Character>().Load("Load/Gameplay/Character.xml");
 
             chessboard = new Chessboard
@@ -121,6 +129,7 @@ namespace StarCheckersWindows
             base.LoadContent();
             
             character.LoadContent(); 
+            backgroundImage.LoadContent();
         
             chessboard.LoadContent();
            
@@ -156,7 +165,18 @@ namespace StarCheckersWindows
             });
 
             isPlayerTurn = true;
-            EndgameCondition = () => !(playerFigures.Any() && enemyFigures.Any());
+            EndgameCondition = () => 
+            
+            initialized &&
+            (!(playerFigures.Any() &&
+            (playerFigures.SelectMany(f => f.GeneratePossibleAttacks(playerFigures, enemyFigures)).Any() ||
+            playerFigures.SelectMany(f => f.GeneratePossibleMoves(playerFigures, enemyFigures)).Any()))
+            ||
+            !(enemyFigures.Any() &&
+            (enemyFigures.SelectMany(f => f.GeneratePossibleAttacks(enemyFigures, playerFigures, true)).Any() ||
+                        enemyFigures.SelectMany(f => f.GeneratePossibleMoves(enemyFigures, playerFigures, true)).Any())));
+
+            initialized = true;
         }
 
         public override void UnloadContent()
@@ -164,6 +184,7 @@ namespace StarCheckersWindows
             base.UnloadContent();
             chessboard.UnloadContent();
             character.UnloadContent();
+            backgroundImage.UnloadContent();
 
             playerFigures.ForEach(f => f.UnloadContent());
             enemyFigures.ForEach(f => f.UnloadContent());
@@ -188,22 +209,38 @@ namespace StarCheckersWindows
             playerFigures.ForEach(f => f.Update(gameTime));
             enemyFigures.ForEach(f => f.Update(gameTime));
 
+            bool a = EndgameCondition();
+
             if (EndgameCondition())
             {
-                if (!playerFigures.Any())
-                {
-                    
-                }
-                else if (!enemyFigures.Any())
-                {
+                EndgameCondition = () => false;
 
+                if (!(playerFigures.Any() &&
+                    (playerFigures.SelectMany(f => f.GeneratePossibleAttacks(playerFigures, enemyFigures)).Any() ||
+                        playerFigures.SelectMany(f => f.GeneratePossibleMoves(playerFigures, enemyFigures)).Any())))
+                {
+                    if (EnemyWins != null)
+                        EnemyWins();
                 }
+                else if (!(enemyFigures.Any() &&
+                        (enemyFigures.SelectMany(f => f.GeneratePossibleAttacks(enemyFigures, playerFigures, true)).Any() ||
+                            enemyFigures.SelectMany(f => f.GeneratePossibleMoves(enemyFigures, playerFigures, true)).Any())))
+                {
+                    if (PlayerWins != null)
+                        PlayerWins();
+                }
+                #if ANDROID
+
+                #else
+                ScreenManager.Instance.ChangeScreens("TitleScreen");
+                #endif
             }
         }
 
         public sealed override void Draw(SpriteBatch spriteBatch)
         {
             base.Draw(spriteBatch);
+            backgroundImage.Draw(spriteBatch);
             chessboard.Draw(spriteBatch);
 //            character.Draw(spriteBatch);
 

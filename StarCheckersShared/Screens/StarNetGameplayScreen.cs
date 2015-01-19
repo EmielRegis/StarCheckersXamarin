@@ -34,36 +34,64 @@ namespace StarCheckersWindows
             
         private void InitializeConnection()
         {
-//            client = new SyncClient(IPAddress.Parse("25.113.123.152"), 8888);
-//            client = new SyncClient(IPAddress.Parse("192.168.0.11"), 8888);
-            client = new SyncClient(IPAddress.Parse("25.122.152.24"), 8888);
-
-            client.StartClient();
-
-           
-          
-
-            string response;
-            response = client.ReceiveMessage();
-            if(response == "white")
+            try
             {
-                isWhite = true;
-                whiteFigures = playerFigures;
-                blackFigures = enemyFigures;
-                isPlayerTurn = true;
-                isEnemyTurn = false;
+//                client = new SyncClient(IPAddress.Parse("25.113.123.152"), 8888);
+                            client = new SyncClient(IPAddress.Parse("192.168.0.11"), 8888);
+                //            client = new SyncClient(IPAddress.Parse("25.122.152.24"), 8888);
+
+                client.StartClient();
+
+
+
+
+                string response;
+                response = client.ReceiveMessage();
+                if(response == "white")
+                {
+                    isWhite = true;
+                    whiteFigures = playerFigures;
+                    blackFigures = enemyFigures;
+                    isPlayerTurn = true;
+                    isEnemyTurn = false;
+                }
+                else if(response == "black")
+                {
+                    whiteFigures = enemyFigures;
+                    blackFigures = playerFigures;
+                    isWhite = false;
+                    isPlayerTurn = false;
+                    isEnemyTurn = true;
+                }
+                else if(response == "any")
+                {
+                    client.StopClient();
+                }
+
+
+                PlayerWins += () =>
+                    {
+                        if(client.serverSocket.Connected)
+                        {
+                            client.SendMessage("end");
+                            client.StopClient();
+                        }
+
+                    };
+
+                EnemyWins += () =>
+                    {
+                        if(client.serverSocket.Connected)
+                        {
+                            client.SendMessage("end");
+                            client.StopClient();
+                        }
+
+                    };
             }
-            else if(response == "black")
+            catch (Exception e)
             {
-                whiteFigures = enemyFigures;
-                blackFigures = playerFigures;
-                isWhite = false;
-                isPlayerTurn = false;
-                isEnemyTurn = true;
-            }
-            else if(response == "any")
-            {
-                client.StopClient();
+                Console.WriteLine(e);
             }
         }
 
@@ -196,8 +224,16 @@ namespace StarCheckersWindows
         {
             base.LoadContent();
 
-            ScreenManager.Instance.AddOnExitApplicationAction(() => 
-                {if(client.serverSocket.Connected) client.SendMessage("user_disconnected");});
+            if(client.serverSocket != null && client.serverSocket.Connected)
+            {
+                ScreenManager.Instance.AddOnExitApplicationAction(() => 
+                    {if(client.serverSocket.Connected) client.SendMessage("user_disconnected");});
+            }
+            else
+            {
+                ScreenManager.Instance.ChangeScreens("TitleScreen");
+            }
+
         }
 
 
@@ -247,9 +283,19 @@ namespace StarCheckersWindows
 
                     }
                 }
-                else
+                else if (answer == "end")
                 {
                     client.StopClient();
+                    ScreenManager.Instance.ChangeScreens("TitleScreen");
+                }
+                else if(answer == "user_disconnected")
+                {
+                    if(client.serverSocket.Connected)
+                    {
+                        client.SendMessage("end");
+                        client.StopClient();
+                    }
+                    ScreenManager.Instance.ChangeScreens("TitleScreen");
                 }
 
 //

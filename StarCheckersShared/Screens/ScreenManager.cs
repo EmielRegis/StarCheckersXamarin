@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
+using System.Runtime.Remoting.Messaging;
 
 
 namespace StarCheckersWindows
@@ -47,17 +48,12 @@ namespace StarCheckersWindows
 
             xmlGameScreenManager = new XmlManager<GameScreen>();
 
-			#if ANDROID
-//			currentScreen = new OnePlayerGameplayScreen ();
-            currentScreen = new StarNetGameplayScreen();
-
-			#else
 //            currentScreen = new SplashScreen();
 			currentScreen = new TitleScreen();
 
 			xmlGameScreenManager.Type = currentScreen.Type;
 			currentScreen = xmlGameScreenManager.Load(currentScreen.XmlPath);
-			#endif
+
         }
 
         public static ScreenManager Instance
@@ -82,6 +78,11 @@ namespace StarCheckersWindows
             Image.FadeEffect.Increase = true;
             Image.Alpha = 0.0f;
             IsTransitioning = true;
+        }
+
+        public bool CanExit()
+        {
+            return currentScreen.Type == typeof(TitleScreen);
         }
 
         private void Transition(GameTime gameTime)
@@ -145,14 +146,20 @@ namespace StarCheckersWindows
             if(IsTransitioning)
                 Image.Draw(spriteBatch);
 
+            #if ANDROID
+
+            #else
             if(CursorImage != null)
                 CursorImage.Draw(SpriteBatch);
+            #endif
         }
 
         public void OnApplicationExit()
         {
             if (applicationExitAction != null)
                 applicationExitAction();
+
+            ChangeScreens("TitleScreen");
         }
 
         public void AddOnExitApplicationAction(Action onExitAction)

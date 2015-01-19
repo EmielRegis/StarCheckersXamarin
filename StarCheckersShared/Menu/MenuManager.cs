@@ -9,6 +9,7 @@ namespace StarCheckersWindows
     {
         private Menu menu;
         private bool isTransitioning;
+        private bool selected;
         
 
         public MenuManager()
@@ -86,6 +87,41 @@ namespace StarCheckersWindows
                     });
                 }
             }
+
+            if ((InputManager.Instance.MouseLeftButtonPressed() || InputManager.Instance.IsTouch) && !isTransitioning)
+            {
+
+                menu.Items.ForEach(ii =>{
+                    if(InputManager.Instance.MouseOrTouchX >  ii.Image.Position.X
+                        && InputManager.Instance.MouseOrTouchX < ii.Image.Position.X + ii.Image.SourceRectange.Width
+                        && InputManager.Instance.MouseOrTouchY > ii.Image.Position.Y
+                        && InputManager.Instance.MouseOrTouchY < ii.Image.Position.Y + ii.Image.SourceRectange.Height)
+                    {
+                        if (ii.LinkType == "Screen")
+                        {
+                            if(!selected)
+                            {
+                                selected = true;
+                                ScreenManager.Instance.ChangeScreens(ii.LinkId);
+                            }
+                        }
+                        else
+                        {
+                            isTransitioning = true;
+                            menu.Transition(1.0f);    
+                            menu.Items.ForEach(i =>
+                                {
+                                    i.Image.StoreEffects();
+                                    i.Image.ActivateEffect("FadeEffect");
+                                });
+                        }
+                    }
+
+                });
+
+                InputManager.Instance.HandleTouch();
+            }
+
             Transition(gameTime);
         }
 

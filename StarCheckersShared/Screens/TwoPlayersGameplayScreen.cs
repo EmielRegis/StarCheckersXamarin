@@ -121,25 +121,25 @@ namespace StarCheckersWindows
             if (selectedFigure != null)
             {
                 if (possibleAttacks.Any(pt =>
-                            pt.Item1.X * dim < Mouse.GetState().X && pt.Item1.Y * dim < Mouse.GetState().Y &&
-                            pt.Item1.X * dim + dim > Mouse.GetState().X && pt.Item1.Y * dim + dim > Mouse.GetState().Y))
+                    pt.Item1.X * dim < InputManager.Instance.MouseOrTouchX && pt.Item1.Y * dim < InputManager.Instance.MouseOrTouchY &&
+                    pt.Item1.X * dim + dim > InputManager.Instance.MouseOrTouchX && pt.Item1.Y * dim + dim > InputManager.Instance.MouseOrTouchY))
                 {
                     Tuple<Point, Figure> dest = possibleAttacks.First(p =>
-                                p.Item1.X * dim < Mouse.GetState().X && p.Item1.Y * dim < Mouse.GetState().Y &&
-                                p.Item1.X * dim + dim > Mouse.GetState().X && p.Item1.Y * dim + dim > Mouse.GetState().Y);
+                        p.Item1.X * dim < InputManager.Instance.MouseOrTouchX && p.Item1.Y * dim < InputManager.Instance.MouseOrTouchY &&
+                        p.Item1.X * dim + dim > InputManager.Instance.MouseOrTouchX && p.Item1.Y * dim + dim > InputManager.Instance.MouseOrTouchY);
 
                     selectedFigure.Attack(dest.Item2, dest.Item1.X, dest.Item1.Y);
                     selectedFigure.IsSelected = false;
                     selectedFigure = null;
                 }
                 else if (possibleMoves.Any(pt =>
-                            pt.X * dim < Mouse.GetState().X && pt.Y * dim < Mouse.GetState().Y &&
-                            pt.X * dim + dim > Mouse.GetState().X && pt.Y * dim + dim > Mouse.GetState().Y) &&
+                    pt.X * dim < InputManager.Instance.MouseOrTouchX && pt.Y * dim < InputManager.Instance.MouseOrTouchY &&
+                    pt.X * dim + dim > InputManager.Instance.MouseOrTouchX && pt.Y * dim + dim > InputManager.Instance.MouseOrTouchY) &&
                             !activeFigures.Any(af => af.GeneratePossibleAttacks(activeFigures, nonActiveFigures, (enemyFigures == activeFigures)).Any()))
                 {
                     Point dest = possibleMoves.First(p =>
-                                p.X * dim < Mouse.GetState().X && p.Y * dim < Mouse.GetState().Y &&
-                                p.X * dim + dim > Mouse.GetState().X && p.Y * dim + dim > Mouse.GetState().Y);
+                        p.X * dim < InputManager.Instance.MouseOrTouchX && p.Y * dim < InputManager.Instance.MouseOrTouchY &&
+                        p.X * dim + dim > InputManager.Instance.MouseOrTouchX && p.Y * dim + dim > InputManager.Instance.MouseOrTouchY);
 
                     selectedFigure.Move(dest.X, dest.Y);
                     selectedFigure.IsSelected = false;

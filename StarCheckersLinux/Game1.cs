@@ -35,18 +35,12 @@ namespace StarCheckersWindows
         /// </summary>
         protected override void Initialize()
         {
-
-
-//            using  (var netManager = new NetworkManager(IPAddress.Parse("25.122.152.24"), 8888))
-//            {
-//                netManager.SendReceiveMessage(NetworkMessageType.OK, true);
-//            }
-
-
             #if ANDROID
             graphics.SupportedOrientations = DisplayOrientation.Portrait;
             graphics.IsFullScreen = true;
             #else
+            Window.IsBorderless = true;
+
             graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
             graphics.PreferredBackBufferWidth = 960;
             graphics.PreferredBackBufferHeight = 640;
@@ -77,6 +71,7 @@ namespace StarCheckersWindows
             ScreenManager.Instance.CursorImage.Position.Y =  (int) e.Event.GetY();
 
             InputManager.Instance.SetTouch((int)e.Event.GetX(), (int)e.Event.GetY());
+
             };
             #else
             ScreenManager.Instance.Dimensions = new Vector2 (960, 640);
@@ -105,7 +100,11 @@ namespace StarCheckersWindows
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             {
                 ScreenManager.Instance.OnApplicationExit();
-                Exit();
+                if(ScreenManager.Instance.CanExit())
+                {
+                    Exit();
+                }
+
             }
                 
 
