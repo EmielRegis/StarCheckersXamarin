@@ -6,11 +6,12 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="StarCheckersShared\Screens\StarNetGameplayScreen.cs">
     <Files>
-      <File FileName="StarCheckersShared\Screens\StarNetGameplayScreen.cs" Line="1" Column="1" />
+      <File FileName="StarCheckersShared\Screens\StarNetGameplayScreen.cs" Line="10" Column="10" />
       <File FileName="StarCheckersShared\Screens\GameplayScreen.cs" Line="1" Column="1" />
-      <File FileName="StarCheckersShared\Net\SyncClient.cs" Line="31" Column="31" />
+      <File FileName="StarCheckersShared\Net\SyncClient.cs" Line="1" Column="1" />
       <File FileName="StarCheckersWindows\Game1.cs" Line="1" Column="1" />
-      <File FileName="StarCheckersShared\Net\Move.cs" Line="2" Column="2" />
+      <File FileName="StarCheckersShared\Net\Move.cs" Line="1" Column="1" />
+      <File FileName="c:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersShared\Net\Attack.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

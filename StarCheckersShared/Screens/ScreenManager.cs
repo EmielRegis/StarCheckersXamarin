@@ -48,7 +48,9 @@ namespace StarCheckersWindows
             xmlGameScreenManager = new XmlManager<GameScreen>();
 
 			#if ANDROID
-			currentScreen = new OnePlayerGameplayScreen ();
+//			currentScreen = new OnePlayerGameplayScreen ();
+            currentScreen = new StarNetGameplayScreen();
+
 			#else
 //            currentScreen = new SplashScreen();
 			currentScreen = new TitleScreen();

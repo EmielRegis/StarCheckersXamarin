@@ -21,9 +21,9 @@
 
   <Item>
     <LinkType>Screen</LinkType>
-    <LinkId>TwoPlayersGameplayScreen</LinkId>
+    <LinkId>StarNetGameplayScreen</LinkId>
     <Image>
-      <Text>Star Arena</Text>
+      <Text>Online Skirmish</Text>
     </Image>
   </Item>
 

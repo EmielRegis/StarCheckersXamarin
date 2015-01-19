@@ -1,0 +1,4 @@
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersClientMockup\bin\Debug\StarCheckersClientMockup.exe
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersClientMockup\bin\Debug\StarCheckersClientMockup.pdb
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersClientMockup\obj\Debug\StarCheckersClientMockup.exe
+C:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersClientMockup\obj\Debug\StarCheckersClientMockup.pdb

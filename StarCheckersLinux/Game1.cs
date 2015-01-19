@@ -4,6 +4,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
+using System.Net;
+using System.Threading;
+using System;
+using System.Diagnostics;
 
 #endregion
 
@@ -31,6 +35,12 @@ namespace StarCheckersWindows
         /// </summary>
         protected override void Initialize()
         {
+
+
+//            using  (var netManager = new NetworkManager(IPAddress.Parse("25.122.152.24"), 8888))
+//            {
+//                netManager.SendReceiveMessage(NetworkMessageType.OK, true);
+//            }
 
 
             #if ANDROID
@@ -93,7 +103,11 @@ namespace StarCheckersWindows
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
+                ScreenManager.Instance.OnApplicationExit();
                 Exit();
+            }
+                
 
             ScreenManager.Instance.Update(gameTime);
 

@@ -43,13 +43,14 @@ namespace StarCheckersWindows
 
                 // Send the data through the socket.
                 int bytesSent = serverSocket.Send(msg);
+                Console.WriteLine("Sent = {0}", message);
 
                 byte[] bytes = new byte[1024];
                 // Receive the response from the remote device.
                 int bytesRec = serverSocket.Receive(bytes);
 
                 string answer = Encoding.ASCII.GetString(bytes, 0, bytesRec);
-                Console.WriteLine("Echoed test = {0}", answer);
+                Console.WriteLine("Received = {0}", answer);
 
 
 
@@ -69,7 +70,7 @@ namespace StarCheckersWindows
             int bytesRec = serverSocket.Receive(bytes);
 
             string answer = Encoding.ASCII.GetString(bytes, 0, bytesRec);
-            Console.WriteLine("Echoed test = {0}", answer);
+            Console.WriteLine("Received = {0}", answer);
            
             return answer;
         }
@@ -81,6 +82,7 @@ namespace StarCheckersWindows
 
             // Send the data through the socket.
             int bytesSent = serverSocket.Send(msg);
+            Console.WriteLine("Sent = {0}", message);
         }
 
         public void StartClient()

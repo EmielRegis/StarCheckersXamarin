@@ -14,7 +14,9 @@ namespace StarCheckersWindows
 {
     class StarNetGameplayScreen : GameplayScreen
     {
-        private Point selectedFigurePrevPosition;
+        private Point selectedFigurePrevPosition = new Point(-1, -1);
+        private List<Point> destPoints = new List<Point>();
+        private List<Point> rmFigsPositions = new List<Point>();
         private SyncClient client;
         private IList<Figure> remFigs = new List<Figure>();
         private IList<Point> destPts = new List<Point>();
@@ -32,11 +34,13 @@ namespace StarCheckersWindows
             
         private void InitializeConnection()
         {
-            client = new SyncClient(IPAddress.Parse("25.113.123.152"), 8888);
+//            client = new SyncClient(IPAddress.Parse("25.113.123.152"), 8888);
+//            client = new SyncClient(IPAddress.Parse("192.168.0.11"), 8888);
+            client = new SyncClient(IPAddress.Parse("25.122.152.24"), 8888);
+
             client.StartClient();
 
-            ScreenManager.Instance.AddOnExitApplicationAction(() => 
-                {client.SendMessage("user_disconnected");});
+           
           
 
             string response;
@@ -83,6 +87,7 @@ namespace StarCheckersWindows
                         string message = JsonConvert.SerializeObject(new NetworkMessage(NetworkMessageType.MOVE, 
                             new Move(selectedFigurePrevPosition, new Point(f.XPosition, f.YPosition))));
                             client.SendMessage(message);
+                        selectedFigurePrevPosition.X = -1;
                     }
                 };
 
@@ -97,6 +102,9 @@ namespace StarCheckersWindows
                         f.IsSelected = true;
                         selectedFigure = f;
                         possibleAttacks = f.GeneratePossibleAttacks(playerFigures, enemyFigures, isRecursive: true);
+
+                        destPoints.Add(new Point(f.XPosition, f.YPosition));
+                        rmFigsPositions.Add(new Point(fig.XPosition, fig.YPosition));
                     }
                     else
                     {
@@ -111,6 +119,23 @@ namespace StarCheckersWindows
                         isRecursiveCaptureInProgress = false;
                         isPlayerTurn = false;
                         isEnemyTurn = true;
+
+                        destPoints.Add(new Point(f.XPosition, f.YPosition));
+                        rmFigsPositions.Add(new Point(fig.XPosition, fig.YPosition));
+
+                        if(client.serverSocket.Connected)
+                        {
+                            string message = JsonConvert.SerializeObject(new NetworkMessage(NetworkMessageType.ATTACK, 
+                                new Attack {
+                                ActPos = selectedFigurePrevPosition,
+                                DestPos = destPoints,
+                                RemFigsPos = rmFigsPositions
+                            }));
+                            client.SendMessage(message);
+                            selectedFigurePrevPosition.X = -1;
+                            rmFigsPositions.Clear();
+                            destPoints.Clear();
+                        }
                     }
                 };
         }
@@ -170,6 +195,9 @@ namespace StarCheckersWindows
         public override void LoadContent()
         {
             base.LoadContent();
+
+            ScreenManager.Instance.AddOnExitApplicationAction(() => 
+                {if(client.serverSocket.Connected) client.SendMessage("user_disconnected");});
         }
 
 
@@ -177,7 +205,7 @@ namespace StarCheckersWindows
         {
             if (isEnemyTurn && client.serverSocket.Connected)
             {
-                string answer = client.ReceiveMessage();
+                string answer = client.ReceiveMessage().Trim();
                 if(answer != "end" && answer != "user_disconnected")
                 {
                     NetworkMessage msg = JsonConvert.DeserializeObject<NetworkMessage>(answer);
@@ -194,7 +222,21 @@ namespace StarCheckersWindows
                     }
                     else if(msg.Type == NetworkMessageType.ATTACK)
                     {
-                        //                    Point selP = msg.Object as Point;
+                        Attack attack = JsonConvert.DeserializeObject<Attack>(msg.Obj.ToString());
+                        selectedFigure = enemyFigures.First(f => f.XPosition == 7 - attack.ActPos.X && f.YPosition == 7 - attack.ActPos.Y);
+                        remFigs = new List<Figure>();
+                        destPoints = new List<Point>();
+                        attack.RemFigsPos.ForEach(rfp => remFigs.Add(playerFigures.First(pf => pf.XPosition == 7 - rfp.X && pf.YPosition == 7 - rfp.Y)));
+                        attack.DestPos.ForEach(dp => destPts.Add(new Point(7 - dp.X, 7 - dp.Y)));
+
+                        if(remFigs.Any())
+                        {
+                            selectedFigure.Attack(remFigs.First(), destPts.First().X, destPts.First().Y);
+                            selectedFigure.IsSelected = false;
+                            selectedFigure = null;
+                            isEnemyTurn = false;
+                        }
+
                     }
                     else if (msg.Type == NetworkMessageType.MULTIPLE_ATTACK)
                     {
@@ -236,7 +278,7 @@ namespace StarCheckersWindows
         {
 
             if (isPlayerTurn)
-            {
+            {              
                 float dim = (Math.Min(ScreenManager.Instance.Dimensions.X, ScreenManager.Instance.Dimensions.Y))/8.0f;
 
                 IList<Figure> activeFigures = playerFigures;
@@ -252,6 +294,7 @@ namespace StarCheckersWindows
                             p.Item1.X*dim < InputManager.Instance.MouseOrTouchX && p.Item1.Y*dim < InputManager.Instance.MouseOrTouchY &&
                             p.Item1.X*dim + dim > InputManager.Instance.MouseOrTouchX && p.Item1.Y*dim + dim > InputManager.Instance.MouseOrTouchY);
 
+                        if(selectedFigurePrevPosition.X == -1) selectedFigurePrevPosition = new Point(selectedFigure.XPosition, selectedFigure.YPosition);
                         selectedFigure.Attack(dest.Item2, dest.Item1.X, dest.Item1.Y);
                         selectedFigure.IsSelected = false;
                         selectedFigure = null;

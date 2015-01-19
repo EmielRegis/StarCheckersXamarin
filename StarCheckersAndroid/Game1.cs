@@ -4,6 +4,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Input.Touch;
+using System.Net;
+using System.Threading;
+using System;
+using System.Diagnostics;
 
 #endregion
 
@@ -31,6 +35,12 @@ namespace StarCheckersWindows
         /// </summary>
         protected override void Initialize()
         {
+
+
+//            using  (var netManager = new NetworkManager(IPAddress.Parse("25.122.152.24"), 8888))
+//            {
+//                netManager.SendReceiveMessage(NetworkMessageType.OK, true);
+//            }
 
 
             #if ANDROID
@@ -62,12 +72,12 @@ namespace StarCheckersWindows
             #if ANDROID
             ScreenManager.Instance.Dimensions = new Vector2 (TouchPanel.DisplayWidth, TouchPanel.DisplayHeight);
             this.Window.Touch += (sender, e) =>  
-                {
-                    ScreenManager.Instance.CursorImage.Position.X =  (int) e.Event.GetX();
-                    ScreenManager.Instance.CursorImage.Position.Y =  (int) e.Event.GetY();
+            {
+            ScreenManager.Instance.CursorImage.Position.X =  (int) e.Event.GetX();
+            ScreenManager.Instance.CursorImage.Position.Y =  (int) e.Event.GetY();
 
-                    InputManager.Instance.SetTouch((int)e.Event.GetX(), (int)e.Event.GetY());
-                };
+            InputManager.Instance.SetTouch((int)e.Event.GetX(), (int)e.Event.GetY());
+            };
             #else
             ScreenManager.Instance.Dimensions = new Vector2 (960, 640);
             #endif
@@ -93,7 +103,11 @@ namespace StarCheckersWindows
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+            {
+                ScreenManager.Instance.OnApplicationExit();
                 Exit();
+            }
+                
 
             ScreenManager.Instance.Update(gameTime);
 
