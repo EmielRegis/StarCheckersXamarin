@@ -4,20 +4,49 @@
     <String>StarCheckersContent\StarCheckersContent\StarCheckersContent.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StarCheckersShared\Screens\GameplayScreen.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StarCheckersShared\Screens\StarNetGameplayScreen.cs">
     <Files>
-      <File FileName="StarCheckersShared\Screens\StarNetGameplayScreen.cs" Line="1" Column="1" />
-      <File FileName="StarCheckersShared\Screens\GameplayScreen.cs" Line="48" Column="48" />
-      <File FileName="StarCheckersShared\Net\SyncClient.cs" Line="1" Column="1" />
-      <File FileName="StarCheckersWindows\Game1.cs" Line="1" Column="1" />
-      <File FileName="StarCheckersShared\Screens\OnePlayerGameplayScreen.cs" Line="14" Column="14" />
+      <File FileName="StarCheckersShared\Screens\StarNetGameplayScreen.cs" Line="92" Column="92" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="StarCheckersAndroid" expanded="True" selected="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Content" expanded="True">
+                <Node name="SplashScreen" expanded="True" />
+              </Node>
+              <Node name="Load" expanded="True" />
+            </Node>
+          </Node>
+          <Node name="StarCheckersLinux" expanded="True">
+            <Node name="Content" expanded="True">
+              <Node name="ScreenManager" expanded="True" />
+              <Node name="SplashScreen" expanded="True" />
+            </Node>
+            <Node name="Load" expanded="True" />
+          </Node>
+          <Node name="StarCheckersShared" expanded="True">
+            <Node name="Screens" expanded="True" />
+          </Node>
+          <Node name="StarCheckersWindows" expanded="True">
+            <Node name="Content" expanded="True">
+              <Node name="SplashScreen" expanded="True" />
+            </Node>
+            <Node name="Load" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>InputManager.Instance.MouseLeftButtonPressed()</Value>
+          <Value>InputManager.Instance.IsTouch</Value>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="c:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersShared\Screens\ScreenManager.cs" line="95" column="21" />
-      <Breakpoint file="c:\Users\Karol\Documents\StarCheckersXamarin\StarCheckersShared\Screens\ScreenManager.cs" line="80" column="11" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

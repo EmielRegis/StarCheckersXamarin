@@ -38,56 +38,59 @@ namespace StarCheckersWindows
             {
 //                client = new SyncClient(IPAddress.Parse("25.113.123.152"), 8888);
                             client = new SyncClient(IPAddress.Parse("192.168.0.11"), 8888);
-                //            client = new SyncClient(IPAddress.Parse("25.122.152.24"), 8888);
+//                            client = new SyncClient(IPAddress.Parse("25.122.152.24"), 8888);
+//                client = new SyncClient(IPAddress.Parse("192.168.137.72"), 8888);
+
 
                 client.StartClient();
 
 
-
-
                 string response;
-                response = client.ReceiveMessage();
-                if(response == "white")
+                if(client.serverSocket != null && client.serverSocket.Connected)
                 {
-                    isWhite = true;
-                    whiteFigures = playerFigures;
-                    blackFigures = enemyFigures;
-                    isPlayerTurn = true;
-                    isEnemyTurn = false;
-                }
-                else if(response == "black")
-                {
-                    whiteFigures = enemyFigures;
-                    blackFigures = playerFigures;
-                    isWhite = false;
-                    isPlayerTurn = false;
-                    isEnemyTurn = true;
-                }
-                else if(response == "any")
-                {
-                    client.StopClient();
-                }
-
-
-                PlayerWins += () =>
+                    response = client.ReceiveMessage();
+                    if(response == "white")
                     {
-                        if(client.serverSocket.Connected)
-                        {
-                            client.SendMessage("end");
-                            client.StopClient();
-                        }
-
-                    };
-
-                EnemyWins += () =>
+                        isWhite = true;
+                        whiteFigures = playerFigures;
+                        blackFigures = enemyFigures;
+                        isPlayerTurn = true;
+                        isEnemyTurn = false;
+                    }
+                    else if(response == "black")
                     {
-                        if(client.serverSocket.Connected)
-                        {
-                            client.SendMessage("end");
-                            client.StopClient();
-                        }
+                        whiteFigures = enemyFigures;
+                        blackFigures = playerFigures;
+                        isWhite = false;
+                        isPlayerTurn = false;
+                        isEnemyTurn = true;
+                    }
+                    else if(response == "any")
+                    {
+                        client.StopClient();
+                    }
 
-                    };
+
+                    PlayerWins += () =>
+                        {
+                            if(client.serverSocket.Connected)
+                            {
+                                client.SendMessage("end");
+                                client.StopClient();
+                            }
+
+                        };
+
+                    EnemyWins += () =>
+                        {
+                            if(client.serverSocket.Connected)
+                            {
+                                client.SendMessage("end");
+                                client.StopClient();
+                            }
+
+                        };
+                }
             }
             catch (Exception e)
             {
@@ -227,7 +230,7 @@ namespace StarCheckersWindows
             if(client.serverSocket != null && client.serverSocket.Connected)
             {
                 ScreenManager.Instance.AddOnExitApplicationAction(() => 
-                    {if(client.serverSocket.Connected) client.SendMessage("user_disconnected");});
+                    {if(client.serverSocket.Connected){ client.SendMessage("user_disconnected"); client.StopClient(); }});
             }
             else
             {
